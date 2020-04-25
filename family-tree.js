@@ -18,15 +18,15 @@ class FamilyTree {
    }
   }
   log(){
-    let arr = []
+    let arr = [];
     if (this.value !== undefined) arr.push(`-- ${this.value}`)
     if (this.children){
       for (let i = 0; i < this.children.length; i++){
-        let curChild = this.children[i]
-        arr.push(`---- ${curChild.value}`)
+        let curChild = this.children[i];
+        arr.push(`---- ${curChild.value}`);
         if (curChild.children.length > 0) {
           for (let j = 0; j < curChild.children.length; j++) {
-          arr.push(`------ ${curChild.children[j].value}`)
+          arr.push(`------ ${curChild.children[j].value}`);
           }
         }
     }
